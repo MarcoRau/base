@@ -4,6 +4,8 @@
 
 #define F_CPU 8000000UL
 
+#define TASTE1 !(PINB & (1<<PB1))		//Taster
+
 #define LED0_AUS PORTD &= ~(1<<PD0);	//löscht bit PD0
 #define LED0_EIN PORTD |= (1<<PD0);		//setzt PD0
 
@@ -30,76 +32,100 @@
 
 int main(void)
 {
-	uint16_t x=0;
-	uint16_t y=0;
 	
-	DDRD = 0xFF;	//Port D als Ausgang setzen
-	
-	/*
-	PORTD = 0xFF;	// alle Pins an Port D auf high setzen
-	*/
+	DDRD = 0xFF;						//Port D als Ausgang setzen
+	PORTD = 0xFF;						// alle Pins an Port D auf high setzen
 	
 	
-	//Lauflicht2-------------
-	/*
+	DDRB &= ~(1<<PB1);					//Eingang
+	PORTB |= (1<<PB1);					//Pull-up Widerstand
 	
 	short zeit=100;
 	
+
 	while(1){
 	
-		LED7_AUS;
-		LED0_AUS;
-		LED0_EIN;
-		LED7_EIN;
-		
-		_delay_ms(zeit);
-		
-		LED0_AUS;
-		LED7_AUS;
-		LED1_EIN;
-		LED6_EIN;
-		
-		_delay_ms(zeit);
-		
-		LED1_AUS;
-		LED6_AUS;
-		LED2_EIN;
-		LED5_EIN;
-		
-		_delay_ms(zeit);
-		
-		LED2_AUS;
-		LED5_AUS;
-		LED3_EIN;
-		LED4_EIN;
+	if(TASTE1){
 	
-		_delay_ms(zeit);
 		
-		LED4_AUS;
-		LED3_AUS;
-		LED5_EIN;
-		LED2_EIN;
-		
-		_delay_ms(zeit);
-		
-		LED5_AUS;
-		LED2_AUS;
-		LED6_EIN;
-		LED1_EIN;
-		
-		_delay_ms(zeit);
-		
-		LED6_AUS;
-		LED1_AUS;
-		LED7_EIN;
-		LED0_EIN;
-		
-	}
+			LED0_EIN;
+			LED2_EIN;
+			LED4_EIN;
+			LED6_EIN;
+			LED1_AUS;
+			LED3_AUS;
+			LED5_AUS;
+			LED7_AUS;
+			
+			_delay_ms(zeit);
+			
+			LED0_AUS;
+			LED2_AUS;
+			LED4_AUS;
+			LED6_AUS;
+			LED1_EIN;
+			LED3_EIN;
+			LED5_EIN;
+			LED7_EIN;
+			
+			_delay_ms(zeit);
+			
+			}	
+		}
+	
+	//--Lauflicht2---------
+	/*
+	while(1){
+			LED7_AUS;
+			LED0_AUS;
+			LED0_EIN;
+			LED7_EIN;
+			
+			_delay_ms(zeit);
+			
+			LED0_AUS;
+			LED7_AUS;
+			LED1_EIN;
+			LED6_EIN;
+			
+			_delay_ms(zeit);
+			
+			LED1_AUS;
+			LED6_AUS;
+			LED2_EIN;
+			LED5_EIN;
+			
+			_delay_ms(zeit);
+			
+			LED2_AUS;
+			LED5_AUS;
+			LED3_EIN;
+			LED4_EIN;
+			
+			_delay_ms(zeit);
+			
+			LED4_AUS;
+			LED3_AUS;
+			LED5_EIN;
+			LED2_EIN;
+			
+			_delay_ms(zeit);
+			
+			LED5_AUS;
+			LED2_AUS;
+			LED6_EIN;
+			LED1_EIN;
+			
+			_delay_ms(zeit);
+			
+			LED6_AUS;
+			LED1_AUS;
+			LED7_EIN;
+			LED0_EIN;
+		}
 	*/
 	
-	
-	
-	
+		
 	//--Lauflicht1-------------
 	/*
 	
@@ -107,132 +133,64 @@ int main(void)
 	
 		LED0_EIN;
 		
-		_delay_ms(500);
+		_delay_ms(zeit);
 		
 		
 		LED0_AUS;
 		LED1_EIN;
 		
 		
-		_delay_ms(500);		
+		_delay_ms(zeit);		
 		
 		
 		LED1_AUS;
 		LED2_EIN;
 		
 		
-		_delay_ms(500);
+		_delay_ms(zeit);
 		
 		
 		LED2_AUS;
 		LED3_EIN;
 		
 		
-		_delay_ms(500);
+		_delay_ms(zeit);
 		
 		
 		LED3_AUS;
 		LED4_EIN;
 		
 		
-		_delay_ms(500);
+		_delay_ms(zeit);
 		
 		
 		LED4_AUS;
 		LED5_EIN;
 		
 		
-		_delay_ms(500);
+		_delay_ms(zeit);
 		
 		
 		LED5_AUS;
 		LED6_EIN;
 		
 		
-		_delay_ms(500);
+		_delay_ms(zeit);
 		
 		
 		LED6_AUS;
 		LED7_EIN;
 		
 		
-		_delay_ms(500);
+		_delay_ms(zeit);
 		
 		
 		LED7_AUS;
 	}
 		
 	*/	
-		
-		
-	//--Fehler------------------
-	/*
-		
-		LED0_EIN;
-		
-		for (x=0; x<10000; x++);
-		
-		
-		LED0_AUS;
-		LED1_EIN;
-		
-		
-		for (x=0; x<30000; x++);
-		
-		
-		LED1_AUS;
-		LED2_EIN;
-		
-		
-		for (x=0; x>10000; x++);
-		
-		
-		LED2_AUS;
-		LED3_EIN;
-		
-		
-		for (x=0; x>10000; x++);
-		
-		
-		LED3_AUS;
-		LED4_EIN;
-		
-		
-		for (x=0; x>10000; x++);
-		
-		
-		LED4_AUS;
-		LED5_EIN;
-		
-		
-		for (x=0; x>10000; x++);
-		
-		
-		LED5_AUS;
-		LED6_EIN;
-		
-		
-		for (x=0; x>10000; x++);
-		
-		
-		LED6_AUS;
-		LED7_EIN;
-		
-		
-		for (x=0; x>10000; x++);
-		
-		
-		LED7_AUS;	
-	
-	*/
 	
 	
-	
-	while(1)
-	{
-		
-		
-	}//end of while
 	
 	return 0;
 }//end of main
