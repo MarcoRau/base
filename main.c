@@ -50,7 +50,7 @@ int main(void)
 	
 	short zeit2=100;
 	
-	short zeit3=200;
+	short zeit3=35;
 	
 	short x=0;
 	
@@ -84,18 +84,16 @@ int main(void)
 					LED7_EIN;
 					
 					_delay_ms(zeit1);
+					
+					
 				
-				}while (x<50);
+				}while (x<10);
 				
 			}
 			
-			else{
-			
-				PORTD = 0x00;
-			}
 				
 				
-			if(TASTE2){	//Lauflicht2
+			else if(TASTE2){	//Lauflicht2
 			
 				do{
 				
@@ -152,16 +150,12 @@ int main(void)
 					
 					LED7_AUS;
 					LED0_AUS;
-				}while(x<15);
-			}
-			
-			else{
-			
-				PORTD = 0x00;
+				}while(x<5);
 			}
 			
 			
-			if(TASTE3){	//Lauflicht3
+			
+			else if(TASTE3){	//Lauflicht3
 			
 				do{
 				
@@ -228,9 +222,15 @@ int main(void)
 			
 				PORTD = 0x00;
 			}
-		x=0;
+			
+			
+			
+			
+			
+			
+		x=0;	//Durchlauf auf Null setzen
 		
-	}
+	}//end of while
 	
 	
 	return 0;
