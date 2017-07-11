@@ -52,6 +52,10 @@ int main(void)
 	
 	short zeit3=35;
 	
+	short zeit4=45;
+	
+	short zeit5=500;
+	
 	short x=0;
 	
 
@@ -87,7 +91,7 @@ int main(void)
 					
 					
 				
-				}while (x<10);
+				}while (x<5);
 				
 			}
 			
@@ -215,7 +219,248 @@ int main(void)
 					
 					
 					LED7_AUS;
+					
 				}while(x<5);
+				
+					LED0_EIN;
+					
+					_delay_ms(zeit4);
+					
+					
+					LED0_AUS;
+					LED1_EIN;
+					
+					
+					_delay_ms(zeit4);		
+					
+					
+					LED1_AUS;
+					LED2_EIN;
+					
+					
+					_delay_ms(zeit4);
+					
+					
+					LED2_AUS;
+					LED3_EIN;
+					
+					
+					_delay_ms(zeit4);
+					
+					
+					LED3_AUS;
+					LED4_EIN;
+					
+					_delay_ms(zeit4);
+					
+					
+					LED4_AUS;
+					LED5_EIN;
+					
+					
+					_delay_ms(zeit4);
+					
+					
+					LED5_AUS;
+					LED6_EIN;
+					
+					
+					_delay_ms(zeit4);
+					
+					
+					LED6_AUS;
+					LED7_EIN;
+					
+					
+					_delay_ms(zeit4);
+					
+					//Teil1
+					
+					LED0_EIN;
+					
+					_delay_ms(zeit4);
+					
+					
+					LED0_AUS;
+					LED1_EIN;
+					
+					
+					_delay_ms(zeit4);		
+					
+					
+					LED1_AUS;
+					LED2_EIN;
+					
+					
+					_delay_ms(zeit4);
+					
+					
+					LED2_AUS;
+					LED3_EIN;
+					
+					
+					_delay_ms(zeit4);
+					
+					
+					LED3_AUS;
+					LED4_EIN;
+					
+					_delay_ms(zeit4);
+					
+					
+					LED4_AUS;
+					LED5_EIN;
+					
+					
+					_delay_ms(zeit4);
+					
+					
+					LED5_AUS;
+					LED6_EIN;
+					
+					
+					_delay_ms(zeit4);
+					
+					//Teil2
+					
+					LED0_EIN;
+					
+					_delay_ms(zeit4);
+					
+					
+					LED0_AUS;
+					LED1_EIN;
+					
+					
+					_delay_ms(zeit4);		
+					
+					
+					LED1_AUS;
+					LED2_EIN;
+					
+					
+					_delay_ms(zeit4);
+					
+					
+					LED2_AUS;
+					LED3_EIN;
+					
+					
+					_delay_ms(zeit4);
+					
+					
+					LED3_AUS;
+					LED4_EIN;
+					
+					_delay_ms(zeit4);
+					
+					
+					LED4_AUS;
+					LED5_EIN;
+					
+					
+					_delay_ms(zeit4);
+					
+					//Teil3
+					
+					LED0_EIN;
+					
+					_delay_ms(zeit4);
+					
+					
+					LED0_AUS;
+					LED1_EIN;
+					
+					
+					_delay_ms(zeit4);		
+					
+					
+					LED1_AUS;
+					LED2_EIN;
+					
+					
+					_delay_ms(zeit4);
+					
+					
+					LED2_AUS;
+					LED3_EIN;
+					
+					
+					_delay_ms(zeit4);
+					
+					
+					LED3_AUS;
+					LED4_EIN;
+					
+					_delay_ms(zeit4);
+					
+					//Teil4
+					
+					LED0_EIN;
+					
+					_delay_ms(zeit4);
+					
+					
+					LED0_AUS;
+					LED1_EIN;
+					
+					
+					_delay_ms(zeit4);		
+					
+					
+					LED1_AUS;
+					LED2_EIN;
+					
+					
+					_delay_ms(zeit4);
+					
+					
+					LED2_AUS;
+					LED3_EIN;
+					
+					
+					_delay_ms(zeit4);
+					
+					//Teil3
+					
+					LED0_EIN;
+					
+					_delay_ms(zeit4);
+					
+					
+					LED0_AUS;
+					LED1_EIN;
+					
+					
+					_delay_ms(zeit4);		
+					
+					
+					LED1_AUS;
+					LED2_EIN;
+					
+					
+					_delay_ms(zeit4);
+					
+					//Teil4
+					
+					LED0_EIN;
+					
+					_delay_ms(zeit4);
+					
+					
+					LED0_AUS;
+					LED1_EIN;
+					
+					
+					_delay_ms(zeit4);
+					
+					//Teil5
+					
+					LED0_EIN;
+					
+					_delay_ms(zeit5);
+				
+				
 			}
 			
 			else{
