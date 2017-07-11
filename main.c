@@ -52,34 +52,40 @@ int main(void)
 	
 	short zeit3=200;
 	
+	short x=0;
+	
 
 	while(1){
 	
 			if(TASTE1){		//Lauficht1
 				
+				do{
 				
-				LED0_EIN;
-				LED2_EIN;
-				LED4_EIN;
-				LED6_EIN;
-				LED1_AUS;
-				LED3_AUS;
-				LED5_AUS;
-				LED7_AUS;
+					x++;
+					
+					LED0_EIN;
+					LED2_EIN;
+					LED4_EIN;
+					LED6_EIN;
+					LED1_AUS;
+					LED3_AUS;
+					LED5_AUS;
+					LED7_AUS;
+					
+					_delay_ms(zeit1);
+					
+					LED0_AUS;
+					LED2_AUS;
+					LED4_AUS;
+					LED6_AUS;
+					LED1_EIN;
+					LED3_EIN;
+					LED5_EIN;
+					LED7_EIN;
+					
+					_delay_ms(zeit1);
 				
-				_delay_ms(zeit1);
-				
-				LED0_AUS;
-				LED2_AUS;
-				LED4_AUS;
-				LED6_AUS;
-				LED1_EIN;
-				LED3_EIN;
-				LED5_EIN;
-				LED7_EIN;
-				
-				_delay_ms(zeit1);
-				
+				}while (x<50);
 				
 			}
 			
@@ -90,58 +96,63 @@ int main(void)
 				
 				
 			if(TASTE2){	//Lauflicht2
+			
+				do{
 				
-				LED7_AUS;
-				LED0_AUS;
-				LED0_EIN;
-				LED7_EIN;
-				
-				_delay_ms(zeit2);
-				
-				LED0_AUS;
-				LED7_AUS;
-				LED1_EIN;
-				LED6_EIN;
-				
-				_delay_ms(zeit2);
-				
-				LED1_AUS;
-				LED6_AUS;
-				LED2_EIN;
-				LED5_EIN;
-				
-				_delay_ms(zeit2);
-				
-				LED2_AUS;
-				LED5_AUS;
-				LED3_EIN;
-				LED4_EIN;
-				
-				_delay_ms(zeit2);
-				
-				LED4_AUS;
-				LED3_AUS;
-				LED5_EIN;
-				LED2_EIN;
-				
-				_delay_ms(zeit2);
-				
-				LED5_AUS;
-				LED2_AUS;
-				LED6_EIN;
-				LED1_EIN;
-				
-				_delay_ms(zeit2);
-				
-				LED6_AUS;
-				LED1_AUS;
-				LED7_EIN;
-				LED0_EIN;
-				
-				_delay_ms(zeit2);
-				
-				LED7_AUS;
-				LED0_AUS;
+					x++;
+					
+					LED7_AUS;
+					LED0_AUS;
+					LED0_EIN;
+					LED7_EIN;
+					
+					_delay_ms(zeit2);
+					
+					LED0_AUS;
+					LED7_AUS;
+					LED1_EIN;
+					LED6_EIN;
+					
+					_delay_ms(zeit2);
+					
+					LED1_AUS;
+					LED6_AUS;
+					LED2_EIN;
+					LED5_EIN;
+					
+					_delay_ms(zeit2);
+					
+					LED2_AUS;
+					LED5_AUS;
+					LED3_EIN;
+					LED4_EIN;
+					
+					_delay_ms(zeit2);
+					
+					LED4_AUS;
+					LED3_AUS;
+					LED5_EIN;
+					LED2_EIN;
+					
+					_delay_ms(zeit2);
+					
+					LED5_AUS;
+					LED2_AUS;
+					LED6_EIN;
+					LED1_EIN;
+					
+					_delay_ms(zeit2);
+					
+					LED6_AUS;
+					LED1_AUS;
+					LED7_EIN;
+					LED0_EIN;
+					
+					_delay_ms(zeit2);
+					
+					LED7_AUS;
+					LED0_AUS;
+				}while(x<15);
 			}
 			
 			else{
@@ -151,68 +162,73 @@ int main(void)
 			
 			
 			if(TASTE3){	//Lauflicht3
+			
+				do{
 				
-				LED0_EIN;
-				
-				_delay_ms(zeit3);
-				
-				
-				LED0_AUS;
-				LED1_EIN;
-				
-				
-				_delay_ms(zeit3);		
-				
-				
-				LED1_AUS;
-				LED2_EIN;
-				
-				
-				_delay_ms(zeit3);
-				
-				
-				LED2_AUS;
-				LED3_EIN;
-				
-				
-				_delay_ms(zeit3);
-				
-				
-				LED3_AUS;
-				LED4_EIN;
-				
-				_delay_ms(zeit3);
-				
-				
-				LED4_AUS;
-				LED5_EIN;
-				
-				
-				_delay_ms(zeit3);
-				
-				
-				LED5_AUS;
-				LED6_EIN;
-				
-				
-				_delay_ms(zeit3);
-				
-				
-				LED6_AUS;
-				LED7_EIN;
-				
-				
-				_delay_ms(zeit3);
-				
-				
-				LED7_AUS;
+					x++;
+					
+					LED0_EIN;
+					
+					_delay_ms(zeit3);
+					
+					
+					LED0_AUS;
+					LED1_EIN;
+					
+					
+					_delay_ms(zeit3);		
+					
+					
+					LED1_AUS;
+					LED2_EIN;
+					
+					
+					_delay_ms(zeit3);
+					
+					
+					LED2_AUS;
+					LED3_EIN;
+					
+					
+					_delay_ms(zeit3);
+					
+					
+					LED3_AUS;
+					LED4_EIN;
+					
+					_delay_ms(zeit3);
+					
+					
+					LED4_AUS;
+					LED5_EIN;
+					
+					
+					_delay_ms(zeit3);
+					
+					
+					LED5_AUS;
+					LED6_EIN;
+					
+					
+					_delay_ms(zeit3);
+					
+					
+					LED6_AUS;
+					LED7_EIN;
+					
+					
+					_delay_ms(zeit3);
+					
+					
+					LED7_AUS;
+				}while(x<5);
 			}
 			
 			else{
 			
 				PORTD = 0x00;
 			}
-			
+		x=0;
 		
 	}
 	
