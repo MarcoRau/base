@@ -2,7 +2,7 @@
 #include <avr/io.h>
 #include <util/delay.h>
 
-#define F_CPU 8000000UL
+#define F_CPU 8000000UL					//Zeit definiert
 
 #define TASTE1 !(PINB & (1<<PB1))		//Taster1
 #define TASTE2 !(PINB & (1<<PB2))		//Taster2
@@ -61,7 +61,7 @@ int main(void)
 
 	while(1){
 	
-			if(TASTE1){		//Lauficht1
+			if(TASTE1){			//Lauficht1
 				
 				do{
 				
@@ -274,7 +274,7 @@ int main(void)
 					
 					_delay_ms(zeit4);
 					
-					//Teil1
+										//Teil1
 					
 					LED0_EIN;
 					
@@ -321,7 +321,7 @@ int main(void)
 					
 					_delay_ms(zeit4);
 					
-					//Teil2
+										//Teil2
 					
 					LED0_EIN;
 					
@@ -361,7 +361,7 @@ int main(void)
 					
 					_delay_ms(zeit4);
 					
-					//Teil3
+										//Teil3
 					
 					LED0_EIN;
 					
@@ -394,7 +394,7 @@ int main(void)
 					
 					_delay_ms(zeit4);
 					
-					//Teil4
+										//Teil4
 					
 					LED0_EIN;
 					
@@ -421,7 +421,7 @@ int main(void)
 					
 					_delay_ms(zeit4);
 					
-					//Teil3
+										//Teil3
 					
 					LED0_EIN;
 					
@@ -441,7 +441,7 @@ int main(void)
 					
 					_delay_ms(zeit4);
 					
-					//Teil4
+										//Teil4
 					
 					LED0_EIN;
 					
@@ -454,7 +454,7 @@ int main(void)
 					
 					_delay_ms(zeit4);
 					
-					//Teil5
+										//Teil5
 					
 					LED0_EIN;
 					
