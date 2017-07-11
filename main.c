@@ -4,7 +4,9 @@
 
 #define F_CPU 8000000UL
 
-#define TASTE1 !(PINB & (1<<PB1))		//Taster
+#define TASTE1 !(PINB & (1<<PB1))		//Taster1
+#define TASTE2 !(PINB & (1<<PB2))		//Taster2
+#define TASTE3 !(PINB & (1<<PB3))		//Taster3
 
 #define LED0_AUS PORTD &= ~(1<<PD0);	//löscht bit PD0
 #define LED0_EIN PORTD |= (1<<PD0);		//setzt PD0
@@ -37,158 +39,182 @@ int main(void)
 	PORTD = 0xFF;						// alle Pins an Port D auf high setzen
 	
 	
-	DDRB &= ~(1<<PB1);					//Eingang
+	DDRB &= ~(1<<PB1);					//Eingang1
 	PORTB |= (1<<PB1);					//Pull-up Widerstand
+	DDRB &= ~(1<<PB2);					//Eingang2
+	PORTB |= (1<<PB2);					//Pull-up Widerstand
+	DDRB &= ~(1<<PB3);					//Eingang2
+	PORTB |= (1<<PB3);					//Pull-up Widerstand
 	
-	short zeit=100;
+	short zeit1=50;
+	
+	short zeit2=100;
+	
+	short zeit3=200;
 	
 
 	while(1){
 	
-	if(TASTE1){
-	
-		
-			LED0_EIN;
-			LED2_EIN;
-			LED4_EIN;
-			LED6_EIN;
-			LED1_AUS;
-			LED3_AUS;
-			LED5_AUS;
-			LED7_AUS;
+			if(TASTE1){		//Lauficht1
+				
+				
+				LED0_EIN;
+				LED2_EIN;
+				LED4_EIN;
+				LED6_EIN;
+				LED1_AUS;
+				LED3_AUS;
+				LED5_AUS;
+				LED7_AUS;
+				
+				_delay_ms(zeit1);
+				
+				LED0_AUS;
+				LED2_AUS;
+				LED4_AUS;
+				LED6_AUS;
+				LED1_EIN;
+				LED3_EIN;
+				LED5_EIN;
+				LED7_EIN;
+				
+				_delay_ms(zeit1);
+				
+				
+			}
 			
-			_delay_ms(zeit);
+			else{
 			
-			LED0_AUS;
-			LED2_AUS;
-			LED4_AUS;
-			LED6_AUS;
-			LED1_EIN;
-			LED3_EIN;
-			LED5_EIN;
-			LED7_EIN;
+				PORTD = 0x00;
+			}
+				
+				
+			if(TASTE2){	//Lauflicht2
+				
+				LED7_AUS;
+				LED0_AUS;
+				LED0_EIN;
+				LED7_EIN;
+				
+				_delay_ms(zeit2);
+				
+				LED0_AUS;
+				LED7_AUS;
+				LED1_EIN;
+				LED6_EIN;
+				
+				_delay_ms(zeit2);
+				
+				LED1_AUS;
+				LED6_AUS;
+				LED2_EIN;
+				LED5_EIN;
+				
+				_delay_ms(zeit2);
+				
+				LED2_AUS;
+				LED5_AUS;
+				LED3_EIN;
+				LED4_EIN;
+				
+				_delay_ms(zeit2);
+				
+				LED4_AUS;
+				LED3_AUS;
+				LED5_EIN;
+				LED2_EIN;
+				
+				_delay_ms(zeit2);
+				
+				LED5_AUS;
+				LED2_AUS;
+				LED6_EIN;
+				LED1_EIN;
+				
+				_delay_ms(zeit2);
+				
+				LED6_AUS;
+				LED1_AUS;
+				LED7_EIN;
+				LED0_EIN;
+				
+				_delay_ms(zeit2);
+				
+				LED7_AUS;
+				LED0_AUS;
+			}
 			
-			_delay_ms(zeit);
+			else{
 			
-			}	
-		}
-	
-	//--Lauflicht2---------
-	/*
-	while(1){
-			LED7_AUS;
-			LED0_AUS;
-			LED0_EIN;
-			LED7_EIN;
+				PORTD = 0x00;
+			}
 			
-			_delay_ms(zeit);
 			
-			LED0_AUS;
-			LED7_AUS;
-			LED1_EIN;
-			LED6_EIN;
+			if(TASTE3){	//Lauflicht3
+				
+				LED0_EIN;
+				
+				_delay_ms(zeit3);
+				
+				
+				LED0_AUS;
+				LED1_EIN;
+				
+				
+				_delay_ms(zeit3);		
+				
+				
+				LED1_AUS;
+				LED2_EIN;
+				
+				
+				_delay_ms(zeit3);
+				
+				
+				LED2_AUS;
+				LED3_EIN;
+				
+				
+				_delay_ms(zeit3);
+				
+				
+				LED3_AUS;
+				LED4_EIN;
+				
+				_delay_ms(zeit3);
+				
+				
+				LED4_AUS;
+				LED5_EIN;
+				
+				
+				_delay_ms(zeit3);
+				
+				
+				LED5_AUS;
+				LED6_EIN;
+				
+				
+				_delay_ms(zeit3);
+				
+				
+				LED6_AUS;
+				LED7_EIN;
+				
+				
+				_delay_ms(zeit3);
+				
+				
+				LED7_AUS;
+			}
 			
-			_delay_ms(zeit);
+			else{
 			
-			LED1_AUS;
-			LED6_AUS;
-			LED2_EIN;
-			LED5_EIN;
+				PORTD = 0x00;
+			}
 			
-			_delay_ms(zeit);
-			
-			LED2_AUS;
-			LED5_AUS;
-			LED3_EIN;
-			LED4_EIN;
-			
-			_delay_ms(zeit);
-			
-			LED4_AUS;
-			LED3_AUS;
-			LED5_EIN;
-			LED2_EIN;
-			
-			_delay_ms(zeit);
-			
-			LED5_AUS;
-			LED2_AUS;
-			LED6_EIN;
-			LED1_EIN;
-			
-			_delay_ms(zeit);
-			
-			LED6_AUS;
-			LED1_AUS;
-			LED7_EIN;
-			LED0_EIN;
-		}
-	*/
-	
-	
-	//--Lauflicht1-------------
-	/*
-	
-	while(1){
-	
-		LED0_EIN;
 		
-		_delay_ms(zeit);
-		
-		
-		LED0_AUS;
-		LED1_EIN;
-		
-		
-		_delay_ms(zeit);		
-		
-		
-		LED1_AUS;
-		LED2_EIN;
-		
-		
-		_delay_ms(zeit);
-		
-		
-		LED2_AUS;
-		LED3_EIN;
-		
-		
-		_delay_ms(zeit);
-		
-		
-		LED3_AUS;
-		LED4_EIN;
-		
-		_delay_ms(zeit);
-		
-		
-		LED4_AUS;
-		LED5_EIN;
-		
-		
-		_delay_ms(zeit);
-		
-		
-		LED5_AUS;
-		LED6_EIN;
-		
-		
-		_delay_ms(zeit);
-		
-		
-		LED6_AUS;
-		LED7_EIN;
-		
-		
-		_delay_ms(zeit);
-		
-		
-		LED7_AUS;
 	}
-		
-	*/	
-	
 	
 	
 	return 0;
