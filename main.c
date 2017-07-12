@@ -36,7 +36,7 @@ int main(void)
 {
 	
 	DDRD = 0xFF;						//Port D als Ausgang setzen
-	PORTD = 0xFF;						// alle Pins an Port D auf high setzen
+	PORTD = 0x00;						// alle Pins an Port D auf high setzen
 	
 	
 	DDRB &= ~(1<<PB1);					//Eingang1
@@ -46,7 +46,269 @@ int main(void)
 	DDRB &= ~(1<<PB3);					//Eingang2
 	PORTB |= (1<<PB3);					//Pull-up Widerstand
 	
-	short zeit1=50;
+	
+	
+	
+	short zeita=200;
+	short zeitb=25;
+	
+	while(1) {
+	
+		if(TASTE2){
+		
+			if(TASTE1){
+			
+			LED0_EIN;
+			
+			_delay_ms(zeita);
+			
+			
+			LED0_AUS;
+			LED1_EIN;
+			
+			
+			_delay_ms(zeita);		
+			
+			
+			LED1_AUS;
+			LED2_EIN;
+			
+			
+			_delay_ms(zeita);
+			
+			
+			LED2_AUS;
+			LED3_EIN;
+			
+			
+			_delay_ms(zeita);
+			
+			
+			LED3_AUS;
+			LED4_EIN;
+			
+			
+			_delay_ms(zeita);
+			
+			
+			LED4_AUS;
+			LED5_EIN;
+			
+			
+			_delay_ms(zeita);
+			
+			
+			LED5_AUS;
+			LED6_EIN;
+			
+			
+			_delay_ms(zeita);
+			
+			
+			LED6_AUS;
+			LED7_EIN;
+			
+			
+			_delay_ms(zeita);
+			
+			LED7_AUS;
+			
+			}
+			
+			else{
+
+			LED0_EIN;
+			
+			_delay_ms(zeitb);
+			
+			
+			LED0_AUS;
+			LED1_EIN;
+			
+			
+			_delay_ms(zeitb);		
+			
+			
+			LED1_AUS;
+			LED2_EIN;
+			
+			
+			_delay_ms(zeitb);
+			
+			
+			LED2_AUS;
+			LED3_EIN;
+			
+			
+			_delay_ms(zeitb);
+			
+			
+			LED3_AUS;
+			LED4_EIN;
+			
+			
+			_delay_ms(zeitb);
+			
+			
+			LED4_AUS;
+			LED5_EIN;
+			
+			
+			_delay_ms(zeitb);
+			
+			
+			LED5_AUS;
+			LED6_EIN;
+			
+			
+			_delay_ms(zeitb);
+			
+			
+			LED6_AUS;
+			LED7_EIN;
+			
+			
+			_delay_ms(zeitb);
+			
+			LED7_AUS;
+			
+			}
+		}
+		
+		else{
+			
+			if(TASTE1){
+			
+			LED7_EIN;
+			
+			_delay_ms(zeita);
+			
+			
+			LED7_AUS;
+			LED6_EIN;
+			
+			
+			_delay_ms(zeita);		
+			
+			
+			LED6_AUS;
+			LED5_EIN;
+			
+			
+			_delay_ms(zeita);
+			
+			
+			LED5_AUS;
+			LED4_EIN;
+			
+			
+			_delay_ms(zeita);
+			
+			
+			LED4_AUS;
+			LED3_EIN;
+			
+			
+			_delay_ms(zeita);
+			
+			
+			LED3_AUS;
+			LED2_EIN;
+			
+			
+			_delay_ms(zeita);
+			
+			
+			LED2_AUS;
+			LED1_EIN;
+			
+			
+			_delay_ms(zeita);
+			
+			
+			LED1_AUS;
+			LED0_EIN;
+			
+			
+			_delay_ms(zeita);
+			
+			LED0_AUS;
+			
+			}
+			
+			else{
+
+			LED7_EIN;
+			
+			_delay_ms(zeitb);
+			
+			
+			LED7_AUS;
+			LED6_EIN;
+			
+			
+			_delay_ms(zeitb);		
+			
+			
+			LED6_AUS;
+			LED5_EIN;
+			
+			
+			_delay_ms(zeitb);
+			
+			
+			LED5_AUS;
+			LED4_EIN;
+			
+			
+			_delay_ms(zeitb);
+			
+			
+			LED4_AUS;
+			LED3_EIN;
+			
+			
+			_delay_ms(zeitb);
+			
+			
+			LED3_AUS;
+			LED2_EIN;
+			
+			
+			_delay_ms(zeitb);
+			
+			
+			LED2_AUS;
+			LED1_EIN;
+			
+			
+			_delay_ms(zeitb);
+			
+			
+			LED1_AUS;
+			LED0_EIN;
+			
+			
+			_delay_ms(zeitb);
+			
+			LED0_AUS;
+			
+			}
+			
+		}
+		
+	}//end of while
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/*
+	short zeit1=75;
 	
 	short zeit2=100;
 	
@@ -61,7 +323,7 @@ int main(void)
 
 	while(1){
 	
-			if(TASTE1){			//Lauficht1
+						//Lauficht1
 				
 				do{
 				
@@ -89,15 +351,28 @@ int main(void)
 					
 					_delay_ms(zeit1);
 					
+					if(TASTE1){
+					PORTD = 0x00;
+					break;
+					}
+					
+					if(TASTE2){
+					PORTD = 0x00;
+					break;
+					}
+					
+					if(TASTE3){
+					PORTD = 0x00;
+					break;
+					}
 					
 				
 				}while (x<5);
 				
-			}
 			
 				
 				
-			else if(TASTE2){	//Lauflicht2
+			if(TASTE2){	//Lauflicht2
 			
 				do{
 				
@@ -504,7 +779,7 @@ int main(void)
 		x=0;	//Durchlauf auf Null setzen
 		
 	}//end of while
-	
+	*/
 	
 	return 0;
 }//end of main
