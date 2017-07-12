@@ -110,6 +110,10 @@ int main(void)
 					
 					_delay_ms(zeit2);
 					
+					if(TASTE3){
+					break;
+					}
+					
 					LED0_AUS;
 					LED7_AUS;
 					LED1_EIN;
@@ -117,12 +121,20 @@ int main(void)
 					
 					_delay_ms(zeit2);
 					
+					if(TASTE3){
+					break;
+					}
+					
 					LED1_AUS;
 					LED6_AUS;
 					LED2_EIN;
 					LED5_EIN;
 					
 					_delay_ms(zeit2);
+					
+					if(TASTE3){
+					break;
+					}
 					
 					LED2_AUS;
 					LED5_AUS;
@@ -131,12 +143,20 @@ int main(void)
 					
 					_delay_ms(zeit2);
 					
+					if(TASTE3){
+					break;
+					}
+					
 					LED4_AUS;
 					LED3_AUS;
 					LED5_EIN;
 					LED2_EIN;
 					
 					_delay_ms(zeit2);
+					
+					if(TASTE3){
+					break;
+					}
 					
 					LED5_AUS;
 					LED2_AUS;
@@ -145,12 +165,20 @@ int main(void)
 					
 					_delay_ms(zeit2);
 					
+					if(TASTE3){
+					break;
+					}
+					
 					LED6_AUS;
 					LED1_AUS;
 					LED7_EIN;
 					LED0_EIN;
 					
 					_delay_ms(zeit2);
+					
+					if(TASTE3){
+					break;
+					}
 					
 					LED7_AUS;
 					LED0_AUS;
